@@ -1,4 +1,6 @@
 project name: UNIBRIDGE
+URL: https://eiliyah22.github.io/Unibridge_website/
+Deployed on netlify with login page: https://uombridge.netlify.app/
 Team name: Ctrl+she
 
 
