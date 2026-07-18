@@ -1,0 +1,171 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    padding:0;
+}
+
+.main-container{
+    display:flex;
+    align-items:stretch;
+    flex-direction:row;
+    min-height:400px;
+    height: 40vh /*50% of the viewport height*/
+    
+}
+
+/*DONT CHANGE LEFT CONTAINER!*/
+.left-container{
+    width:50%;
+    background: linear-gradient(150deg, #b9c5fc, #130f5d);
+    padding: 30px 50px;
+    margin: 0;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+
+.left-container h1{
+    font-family:'candara',sans-serif;
+}
+
+#first-h1{
+    font-size: 48px;
+    color:rgb(0, 0, 0);
+}
+
+#second-h1{
+    font-size: 36px;
+    color:rgb(4, 4, 141);
+    margin-bottom:20px;
+}
+
+
+.description-paragraph{
+    font-size:16px;
+    font-family:'roboto',sans-serif;
+    color:rgb(247, 246, 255);
+    margin-bottom:20px; /*margin-bottom - to add spaces at the bottom of the paragraph before next element*/
+
+}
+
+/*display:flex - to make button be in row not column
+  gap:20px - to make space between button*/
+
+.button-container{
+    display:flex;
+    gap:20px;
+}
+
+.upload-button{
+    background:white;
+    padding: 8px 20px;
+    font-size: 18px;
+    border-radius:15px;
+}
+.upload-button:hover{
+    background:rgb(81, 81, 239);
+    color:white;
+}
+
+.explore-button{
+    background:rgb(81, 81, 239);
+    color:white;
+    padding: 8px 20px;
+    font-size: 18px;
+    border-radius: 15px;
+}
+.explore-button:hover{
+    background:rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+
+}
+/*DONT CHANGE RIGHT CONTAINER!*/
+.right-container{
+    width:50%;                              /*to set the height of the container to match the image height*/
+    overflow:hidden;                       /*to hide the part of the image that exceeds the container*/
+    background:rgb(198, 198, 253);
+    display:flex;                               /*to center the image vertically and horizontally*/
+    align-items:center;                              /*to center the image vertically*/
+   justify-content:center;                          /*to center the image horizontally*/
+}
+
+.right-container img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    display:block;
+}
+
+/* ----------RESPONSIVENESS---------- */
+@media (max-width: 768px) {
+
+    /* MAIN LAYOUT */
+    .main-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-container,
+    .right-container {
+        width: 100%;
+    }
+
+    .left-container {
+        padding: 25px;
+        text-align: center;
+        align-items: center;
+    }
+
+    /* HEADINGS */
+    #first-h1 {
+        font-size: 34px;
+    }
+
+    #second-h1 {
+        font-size: 26px;
+    }
+
+    .description-paragraph {
+        font-size: 15px;
+    }
+
+    /* BUTTON SECTION */
+    .button-container {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+        align-items: stretch;
+    }
+
+    .button-container a {
+        width: 100%;
+        display: block;
+    }
+
+    .upload-button,
+    .explore-button {
+        width: 100%;
+        display: block;
+        padding: 14px;
+        font-size: 16px;
+        border-radius: 12px;
+    }
+
+    /* RIGHT IMAGE */
+    .right-container {
+        min-height: 300px;
+    }
+
+    .right-container img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}

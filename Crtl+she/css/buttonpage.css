@@ -1,0 +1,18 @@
+.Back-to-homepage{
+    background:rgb(81, 81, 239);
+    color:white;
+    padding: 8px 20px;
+    border-radius: 15px;
+}
+
+/* ---------RESPONSIVENESS-------- */
+@media (max-width: 480px) {
+    .Back-to-homepage {
+        display: block;        /* full-width touch button */
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 10px;
+    }
+}

@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Nunito:wght@400;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin:0;
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ebe8f8;   /* is override when other section has its own color*/
+}
+
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.buttons{
+    margin-left: auto;
+}
+.buttons button{
+    margin-left:10px;
+    margin-top: 50px;
+    padding: 10px 12px;
+}
+
+
+ul li{
+    display: inline-block;
+    position:relative;
+}
+
+ul li a{                     /*for navigation bar*/
+    
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    padding: 6px 8px;
+    font-size: 17px;
+}
+
+
+ul li ul.dropdown{
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 280px;
+    background: #674595;
+
+    display: none;
+    z-index: 999;
+
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+
+
+ul li ul.dropdown li{
+display:block;
+width: 100%;
+}
+
+ul li ul.dropdown li a{
+    display: block;
+    width: 100%;
+    padding: 12px 18px;
+    color: #ffffff;
+    font-size: 15px;
+    text-align: left;               /* left-align looks in dropdowns */
+    white-space: nowrap;            /* prevents text wrapping */
+}
+
+ul li a:hover {
+    background: #674595;
+    color: #ffffff;
+}
+
+ul li:hover ul.dropdown {
+    display: block;
+}
+
+ul li ul.dropdown li a:hover {
+    background: #050505;
+    color: #ffffff;
+}
+
+nav{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #5c4aad;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap:40px;
+    list-style:none;
+    padding:0% 20px;
+    margin: 0;
+    background: #3d2d8f;
+    height: 70px;
+    position: relative;         /*for absolute postioning sa akz mo envi zis mo logo bouZ sans ki li touche ban leress*/
+}
+
+
+
+.button-group{
+    display: flex;
+    align-items: center;
+    gap:1px;
+    margin-left: auto;
+}
+
+
+
+button:hover{
+    background-color: #45258b;
+    border-color: #e1e6f1c0;
+    transform: translateY(-4px);
+}
+
+.logo a{
+    font-family: "Montserrat", sans-serif;   /* the font of my logo*/
+    font-size: 28px;
+    font-weight: 700;
+    color:#ffffff;
+    text-decoration: none;
+    margin-top: 15px
+}
+
+.logo h6{
+    color:#e0d9ff;
+    margin: 0;
+}
+
+.logo img {
+    height: 80px;
+    width: 80px;
+    object-fit: contain;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    margin-right: -20px;     /* auto would have pushed all menu items to the right */
+}
+
+.logo-text{
+    margin:0;
+    text-decoration:none;
+}
+
+
+.container {
+    width: 100%;
+    background: linear-gradient(to bottom, #4b099c, #9ecae6);
+    color: white;
+    padding: 30px 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+
+
+.section {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 0 25px;
+}
+
+
+.section:last-child {
+    border-right: none;
+    text-align: left;
+    position: relative;
+}
+
+header{
+    display:flex;         /*item insidd header will be placed in a row*/
+    align-items:center;
+}
+
+
+
+header img{
+    width:40px;
+    margin-left:10px;
+}
+
+.icon{
+    width:40px;
+    height:40px;
+    flex-shrink:0;
+}
+
+
+.icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.box2 {
+    width: 100%;
+    background-color: #381c75;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 25px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+.box2 .section {
+    border: none;
+    justify-content: center;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.box2 .section + .section {
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer{
+    background-color: #32303d;
+    color: white;
+    text-align: center;
+    padding: 2px;
+    
+}
+
+/*------- RESPONSIVENESS---------*/
+@media (max-width: 768px) {
+
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        gap: 10px;
+        padding: 20px;
+    }
+
+    .logo {
+        margin-right: 0;
+    }
+
+    .logo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .logo a {
+        font-size: 18px;
+    }
+
+    .logo h6 {
+        font-size: 12px;
+    }
+
+    ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    ul li a {
+        display: block;
+        width: 100%;
+        padding: 12px;
+    }
+
+    ul li ul.dropdown,
+    .dropdown {
+        position: static !important;
+        width: 100% !important;
+    }
+
+    /* Information Section */
+    .container {
+        padding: 20px 10px;
+        margin-top: 20px;
+        flex-direction: column;
+    }
+
+    .section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* Statistics Box */
+    .box2 {
+        flex-direction: column;
+        font-size: 1rem;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .box2 .section + .section {
+        border-left: none;
+        border-top: 1px solid rgba(255,255,255,0.3);
+        padding-top: 15px;
+    }
+
+    /* Buttons */
+    .buttons button {
+        width: 100%;
+        max-width: 200px;
+        margin: 5px 0;
+    }
+
+    /* Footer */
+    .footer {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
